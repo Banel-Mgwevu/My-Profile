@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Developer Profile</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <style>
+   body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to bottom, #3498db, #2c3e50); /* Gradient colors */
+      background-size: cover; /* Adjust as needed */
+      background-repeat: no-repeat;
+      padding: 20px;
+      color: #fff; /* Text color on the gradient background */
+    }
+    header {
+  text-align: center;
+  padding: 20px 0;
+  color: #2c3e50; /* Dark Blue */
+  animation: bounce 1s 3; /* Change the iteration count to 5 */
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+    .about, .skills, .projects {
+      margin-bottom: 30px;
+      padding: 20px;
+      background-color: #fff; /* White */
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 1s forwards;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .skills ul, .projects ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .skills li, .projects li {
+      padding: 10px 0;
+    }
+
+    .skills li::before {
+      content: "\f138"; /* Font Awesome checkmark icon */
+      font-family: 'FontAwesome';
+      margin-right: 10px;
+      color: #27ae60; /* Emerald Green */
+    }
+
+    /* Zoom in effect for project links */
+    .projects li a {
+      text-decoration: none;
+      position: relative;
+      transition: transform 0.3s ease;
+      color: #3498db; /* Blue */
+    }
+
+    .projects li a::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #3498db; /* Blue */
+      transform: scaleX(0);
+      transform-origin: bottom right;
+      transition: transform 0.3s ease;
+    }
+
+    .projects li a:hover {
+      transform: translateY(-5px) scale(1.05);
+      color: #e74c3c; /* Alizarin Red */
+    }
+
+    .projects li a:hover::after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+
+    /* Pulse effect for project links on hover */
+    .projects li a {
+      position: relative;
+      transition: transform 0.3s ease;
+    }
+
+    .projects li a:hover {
+      animation: pulse 0.5s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+    }
+
+    footer {
+  text-align: center;
+  font-size: 16px; /* Increase the font size */
+  margin-top: 40px; /* Increase the margin-top for more space */
+  color: #555; /* Dark Gray */
+}
+
+    footer a {
+      color: #2980b9; /* Blue */
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: #e74c3c; /* Alizarin Red */
+    }
+
+    .about, .skills, .projects {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent white background */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s forwards;
+}
+
+
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1><b>Welcome to My Developer Profile</b></h1>
+    <p><b>Passionate Full Stack Developer </b></p>
+  </header>
+  
+  <div class="container">
+    <section class="about">
+      <h2>About Me</h2>
+      <p>My name is Banele Mgwevu, a dedicated and skilled software developer with a strong focus on backend and API development with good understanding of frontend. My passion lies in crafting robust, efficient, and scalable solutions that drive innovation and enhance user experiences.</p>
+    </section>
+    
+    <section class="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li><b>👽 Backend:</b> <i>Node.Js, Flask,Django, PHP,Apache, API development, JAVA, Kotlin</i></li>
+        <li><b>🤖 Front-End :</b><i> Flutter, HTML,CSS,Java script, Bootstrap, Figma, AJAX</i></li>
+        <li><b>🦾 Database :</b><i> Firebase Fire store and Real-time, DB,MYSQL,SQL,PLSQL,NoSql, SQLite, Redis, Access, CouchDB</i></li>
+        <li> <b>👾 Languages: </b><i>Python, PHP,Java script, Dart,C++,TypeScript,HTML,CSS
+          👻 Other: Docker,Git, GitHub, Xammp,MAMP ,Ngrok, Azure, SSH, C-Panel, Web/Android hosting, Linux, Android/iOS,JSON, Dialog-flow & Kubernetes</i></li>
+        <li></i>👀 <b>Version Control:</b> (Git, GitHub), SVN,GitLab, Sourcetree</i></li>
+      </ul>
+    </section>
+
+    <section class="projects">
+      <h2>Notable Projects</h2>
+      <ul>
+        <li><a href="#">CV Builder Chatbot (Built with Flutter,Node.Js,Dialogflow)</a></li>
+        <li><a href="#">Spearheaded Softmeet Application (Built with Flutter,Node.JS,Firebase)</a></li>
+        <li><a href="https://github.com/Banel-Mgwevu/Hustlers">Hustler's Project (Built with C#, HTML,CSS,.DNET)</a></li>
+  
+        <li><a href="https://github.com/Banel-Mgwevu">Other Projects Are On My GitHub, some are private because contain senstive information</a></li>
+        
+      </ul>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2023 Banele Mgwevu | Find me on <a href="https://github.com/Banel-Mgwevu"" target="_blank">GitHub</a></p>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
